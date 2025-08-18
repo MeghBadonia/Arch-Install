@@ -92,7 +92,7 @@ void networking() {
     char cmd[256];
 
     while (1) {
-        if (system("ping -c 1 google.com > /dev/null") != 0) {
+        if (system("ping -c 1 google.com > /dev/null 2>&1") == 0) {
             printf("[ ✓ ]  Internet is connected");
             printf("\n\n");
             break;
